@@ -8,7 +8,15 @@ namespace Restory_Restaurant_PresentatıonLayer_UI_.Controllers
         {
             return View();
         }
-        public PartialViewResult AboutUs()
+        public PartialViewResult HeaderPartial()
+        {
+            return PartialView();
+        }
+        public PartialViewResult NavbarPartial()
+        {
+            return PartialView();
+        }
+        public PartialViewResult ScriptPartial()
         {
             return PartialView();
         }

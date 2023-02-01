@@ -9,11 +9,11 @@ using System.Threading.Tasks;
 
 namespace Restory_Restaurant_BusinessLayer.Concrete
 {
-    public class IIntroductionManager : IIntroductionService
+    public class IntroductionManager : IIntroductionService
     {
         private readonly IIntroductionDal _introductionDal;
 
-        public IIntroductionManager(IIntroductionDal introductionDal)
+        public IntroductionManager(IIntroductionDal introductionDal)
         {
             _introductionDal = introductionDal;
         }

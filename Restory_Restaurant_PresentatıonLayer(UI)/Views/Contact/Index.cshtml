@@ -1,0 +1,60 @@
+﻿@model List<Contact>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_DefaultLayout.cshtml";
+}
+
+<div class="mail">
+    @foreach (var item in Model)
+    {
+        <div class="mail-grid1">
+
+            <div class="container">
+
+                <h2 class="tittle-w3">Contact <span>US</span></h2>
+
+                <div class="col-md-4 mail-agileits-w3layouts">
+                    <i class="glyphicon glyphicon-earphone" aria-hidden="true"></i>
+                    <div class="contact-right">
+                        <p>Phone</p><span>@item.Phone</span>
+                    </div>
+                </div>
+                
+
+                <div class="col-md-4 mail-agileits-w3layouts">
+                    <i class="glyphicon glyphicon-envelope" aria-hidden="true"></i>
+                    <div class="contact-right">
+                        <p>Mail</p><a href="mailto:info@example.com">@item.Mail</a>
+                    </div>
+                </div>
+
+                <div class="col-md-4 mail-agileits-w3layouts">
+                    <i class="glyphicon glyphicon-map-marker" aria-hidden="true"></i>
+                    <div class="contact-right">
+                        <p>Address</p><span>@item.Address1</span>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+
+            </div>
+
+        </div>
+
+
+        <div class="col-md-7 map ">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d559.2354279574456!2d29.043824525142604!3d41.07782093470418!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cab61d3084ffff%3A0xc81f944c7c6eb356!2sBebek%20Sahili!5e0!3m2!1str!2str!4v1675202260705!5m2!1str!2str" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    }
+
+    <div class="col-md-5 mail-grid1-form ">
+        <h3 class="tittle-w3"><span>Send a </span>Message</h3>
+        <form action="#" method="post">
+            <input type="text" name="Name" placeholder="Name" required="" />
+            <input type="email" name="Email" placeholder="Mail" required="" />
+            <textarea name="Message" placeholder="Type Your Text Here...." required=""></textarea>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+    <div class="clearfix"></div>
+</div>
+

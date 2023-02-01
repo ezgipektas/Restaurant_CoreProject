@@ -6,7 +6,11 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Options;
+using Restory_Restaurant_BusinessLayer.Abstract;
+using Restory_Restaurant_BusinessLayer.Concrete;
+using Restory_Restaurant_DataAccessLayer.Abstract;
 using Restory_Restaurant_DataAccessLayer.Concrete;
+using Restory_Restaurant_DataAccessLayer.EntityFramework;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -31,6 +35,11 @@ namespace Restory_Restaurant_PresentatıonLayer_UI_
                 options.UseSqlServer(Configuration["ConStr"]);
             });
             services.AddControllersWithViews();
+
+            services.AddScoped<IContactService, ContactManager>();
+            services.AddScoped<IContactDal, EfContactDal>();
+            services.AddScoped<IGalleryService, GalleryManager>();
+            services.AddScoped<IGalleryDal, EfGalleryDal>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

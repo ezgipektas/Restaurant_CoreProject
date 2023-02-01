@@ -12,7 +12,9 @@ namespace Restory_Restaurant_EntityLayer.Concrete
     {
         [Key]
         public int GalleryID { get; set; }
-        public string ImageUrl { get; set; }
+        public string ImageUrl1 { get; set; }
+        public string ImageUrl2 { get; set; }
+        public string ImageUrl3 { get; set; }
         public string Title { get; set; }
         public string Description { get; set; }
     }

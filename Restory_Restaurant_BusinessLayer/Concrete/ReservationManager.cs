@@ -9,11 +9,11 @@ using System.Threading.Tasks;
 
 namespace Restory_Restaurant_BusinessLayer.Concrete
 {
-    public class IReservationManager : IReservationService
+    public class ReservationManager : IReservationService
     {
         private readonly IReservationDal _reservationDal;
 
-        public IReservationManager(IReservationDal reservationDal)
+        public ReservationManager(IReservationDal reservationDal)
         {
             _reservationDal = reservationDal;
         }

@@ -9,9 +9,14 @@ using System.Threading.Tasks;
 
 namespace Restory_Restaurant_BusinessLayer.Concrete
 {
-    public class IMessageManager : IMessageService
+    public class MessageManager : IMessageService
     {
         private readonly IMessageDal _messageDal;
+
+        public MessageManager(IMessageDal messageDal)
+        {
+            _messageDal = messageDal;
+        }
 
         public void TAdd(Message t)
         {

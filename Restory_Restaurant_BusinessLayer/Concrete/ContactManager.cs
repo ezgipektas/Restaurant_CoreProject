@@ -9,11 +9,11 @@ using System.Threading.Tasks;
 
 namespace Restory_Restaurant_BusinessLayer.Concrete
 {
-    public class IContactManager : IContactService
+    public class ContactManager : IContactService
     {
         private readonly IContactDal _contactDal;
 
-        public IContactManager(IContactDal contactDal)
+        public ContactManager(IContactDal contactDal)
         {
             _contactDal = contactDal;
         }

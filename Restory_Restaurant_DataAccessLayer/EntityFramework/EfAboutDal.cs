@@ -10,12 +10,13 @@ using System.Threading.Tasks;
 
 namespace Restory_Restaurant_DataAccessLayer.EntityFramework
 {
-    public class EfAboutDal { }
-    //: GenericRepository<About>, IAboutDal
-    //{
-    //    public EfAboutDal(Context context) : base(context)
-    //    {
+    public class EfAboutDal : GenericRepository<About>, IAboutDal
+    {
+        public EfAboutDal(Context context) : base(context)
+        {
 
-    //    }
+        }
+
     }
+}
 

@@ -9,10 +9,10 @@ using System.Threading.Tasks;
 
 namespace Restory_Restaurant_BusinessLayer.Concrete
 {
-    public class IAboutManager : IAboutService
+    public class AboutManager : IAboutService
     {
         private readonly IAboutDal _aboutDal;
-        public IAboutManager(IAboutDal aboutDal)
+        public AboutManager(IAboutDal aboutDal)
         {
             _aboutDal = aboutDal;
         }

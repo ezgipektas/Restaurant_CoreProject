@@ -9,11 +9,11 @@ using System.Threading.Tasks;
 
 namespace Restory_Restaurant_BusinessLayer.Concrete
 {
-    public class IGalleryManager : IGalleryService
+    public class GalleryManager : IGalleryService
     {
         private readonly IGalleryDal _galleryDal;
 
-        public IGalleryManager(IGalleryDal galleryDal)
+        public GalleryManager(IGalleryDal galleryDal)
         {
             _galleryDal = galleryDal;
         }

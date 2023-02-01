@@ -9,11 +9,11 @@ using System.Threading.Tasks;
 
 namespace Restory_Restaurant_BusinessLayer.Concrete
 {
-    public class IEmployeeManager : IEmployeeService
+    public class EmployeeManager : IEmployeeService
     {
         private readonly IEmployeeDal _employeeDal;
 
-        public IEmployeeManager(IEmployeeDal employeeDal)
+        public EmployeeManager(IEmployeeDal employeeDal)
         {
             _employeeDal = employeeDal;
         }

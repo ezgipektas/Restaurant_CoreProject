@@ -9,11 +9,11 @@ using System.Threading.Tasks;
 
 namespace Restory_Restaurant_BusinessLayer.Concrete
 {
-    public class IPopularFlavorManager : IPopularFlavorService
+    public class PopularFlavorManager : IPopularFlavorService
     {
         private readonly IPopularFlavorDal _popularFlavorDal;
 
-        public IPopularFlavorManager(IPopularFlavorDal popularFlavorDal)
+        public PopularFlavorManager(IPopularFlavorDal popularFlavorDal)
         {
             _popularFlavorDal = popularFlavorDal;
         }
